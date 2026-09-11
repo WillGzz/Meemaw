@@ -1,4 +1,10 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Meemaw
+
+Meemaw helps older adults stay connected with family through simple voice conversations.
+
+See [the stack and implementation plan](./PLAN.md) for the architecture, current status, and next milestones.
+
+The current Next.js prototype includes account selection, elder setup, and relative setup. Profiles are held in memory; authentication, persistence, account integrations, and voice are planned.
 
 ## Getting Started
 

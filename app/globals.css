@@ -24,3 +24,93 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+button:enabled {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+button:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #ef5d70;
+  outline-offset: 4px;
+}
+
+/* Family workflow: large controls and the existing navy/coral palette. */
+.meemaw-app { --navy: #172554; --coral: #db455c; color: var(--navy); background: #f7f7f4; min-height: 100dvh; font-size: 20px; line-height: 1.6; }
+.meemaw-app h1 { font-size: clamp(2rem, 4.8vw, 3.3rem); line-height: 1.15; font-weight: 750; letter-spacing: -.04em; }
+.meemaw-app h2 { font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.25; font-weight: 700; letter-spacing: -.025em; }
+.meemaw-app h3 { font-size: 1.5rem; font-weight: 700; line-height: 1.3; }
+.meemaw-app .muted { color: #53617a; }
+.meemaw-app .eyebrow { color: #a93449; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 750; margin-bottom: 12px; }
+.meemaw-app .surface { background: white; border: 1px solid #e1e5e9; border-radius: 28px; padding: clamp(24px, 4vw, 40px); box-shadow: 0 8px 30px #17255404; }
+.meemaw-app .primary, .meemaw-app .secondary { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 60px; border-radius: 16px; padding: 14px 24px; font-size: 1.125rem; font-weight: 700; line-height: 1.4; text-align: center; }
+.meemaw-app .primary { color: white; background: var(--navy); }
+.meemaw-app .primary:hover { background: #253c7e; }
+.meemaw-app .secondary { background: #eef1f8; color: var(--navy); border: 1px solid #d5dceb; }
+.meemaw-app button:disabled { opacity: .5; cursor: not-allowed; }
+.meemaw-app :is(a, input, textarea, select):focus-visible { outline: 3px solid #db455c; outline-offset: 4px; }
+.meemaw-app .quiet-link { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-size: 1rem; font-weight: 650; min-height: 44px; text-decoration: underline; text-underline-offset: 4px; }
+.meemaw-app .form-stack { display: grid; gap: 22px; }
+.meemaw-app label { display: grid; gap: 8px; font-size: 1.125rem; font-weight: 650; }
+.meemaw-app input, .meemaw-app textarea, .meemaw-app select { width: 100%; min-width: 0; min-height: 60px; background: #fafbfC; border: 1px solid #bac3d2; border-radius: 14px; padding: 14px 16px; color: var(--navy); font-size: 1.25rem; font-weight: 400; }
+.meemaw-app textarea { resize: vertical; }
+.meemaw-app .field-note, .meemaw-app .voice-note { font-size: .9375rem; color: #59657b; line-height: 1.6; }
+.meemaw-app .notice { padding: 18px 22px; background: #edf6f1; border: 1px solid #c1dccd; border-radius: 16px; font-size: 1rem; margin: 16px 0; color: #24533b; }
+.meemaw-app .notice.error { background: #fff1f1; border-color: #efc3c8; color: #962f3b; }
+.meemaw-app .account-shell { width: min(100% - 40px, 620px); margin: auto; padding: 32px 0 64px; }
+.meemaw-app .account-card { margin-top: 24px; }
+.meemaw-app .account-card .form-stack { margin-top: 32px; }
+.meemaw-app .brand-mark { display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 22px; background: #fff0f2; color: var(--coral); margin-bottom: 26px; }
+.meemaw-app .account-footer { margin-top: 24px; font-size: 1rem; text-align: center; }
+.meemaw-app .account-footer a { text-decoration: underline; font-weight: 700; }
+.meemaw-app .family-header { display: flex; align-items: center; justify-content: space-between; padding: 20px max(24px, calc((100vw - 1100px) / 2)); background: #fff; border-bottom: 1px solid #e1e5e9; gap: 24px; }
+.meemaw-app .brand { display: flex; align-items: center; gap: 12px; font-size: 1.5rem; font-weight: 750; }
+.meemaw-app .brand svg { color: var(--coral); }
+.meemaw-app .dashboard-shell { max-width: 1100px; margin: auto; padding: 48px 24px 80px; }
+.meemaw-app .dashboard-intro { padding: 16px 0 40px; }
+.meemaw-app .dashboard-intro .muted { margin-top: 16px; }
+.meemaw-app .section-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin: 38px 0 24px; }
+.meemaw-app .family-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px; }
+.meemaw-app .family-card { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
+.meemaw-app .family-card .primary { margin-top: auto; width: 100%; }
+.meemaw-app .avatar { display: flex; align-items: center; justify-content: center; width: 76px; height: 76px; border-radius: 26px; background: #e8eee7; color: #3b6050; font-size: 2rem; font-weight: 700; }
+.meemaw-app .status { border-radius: 24px; padding: 5px 12px; font-size: .8125rem; font-weight: 650; background: #fff4dd; color: #765017; }
+.meemaw-app .status.accepted { background: #eaf6ee; color: #2d6740; }
+.meemaw-app .status.declined { background: #f4e9ec; color: #913b4c; }
+.meemaw-app .relationship { color: #53617a; }
+.meemaw-app .empty-state { background: #f0f2ef; border: 1px dashed #c3cfc5; border-radius: 24px; padding: 40px; text-align: center; }
+.meemaw-app .empty-state svg { margin: 0 auto 20px; color: #608272; }
+.meemaw-app .empty-state p { max-width: 520px; margin: 12px auto 0; color: #53617a; }
+.meemaw-app .add-family-section { margin-top: 28px; }
+.meemaw-app .connect-form { max-width: 620px; }
+.meemaw-app .invite-card { display: flex; align-items: center; gap: 32px; justify-content: space-between; background: #fff8f6; }
+.meemaw-app .invite-card .primary { flex-shrink: 0; }
+.meemaw-app .family-code { font-size: clamp(1.25rem, 4vw, 2rem); font-weight: 750; letter-spacing: .05em; overflow-wrap: anywhere; margin-bottom: 16px; user-select: all; }
+.meemaw-app .instagram-label { font-size: 1rem; font-weight: 650; margin-top: 14px; }
+.meemaw-app .connection-card { margin-top: 24px; }
+.meemaw-app .connection-card .muted { margin-top: 12px; }
+.meemaw-app .one-button { margin: 24px 0; }
+.meemaw-app .connected-account { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 0; border-bottom: 1px solid #e1e5e9; font-size: 1rem; }
+.meemaw-app .ask-panel { max-width: 780px; margin: auto; }
+.meemaw-app .ask-heading { text-align: center; padding: 28px 0 32px; }
+.meemaw-app .ask-heading .avatar { margin: 0 auto 20px; }
+.meemaw-app .ask-heading h1 { font-size: clamp(2rem, 5vw, 2.8rem); }
+.meemaw-app .ask-heading .muted { margin-top: 12px; }
+.meemaw-app .microphone { width: 176px; height: 120px; border-radius: 40px; background: #db455c; color: white; display: flex; flex-direction: column; gap: 2px; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 0 0 12px #fff0f2; font-size: 1.125rem; font-weight: 750; }
+.meemaw-app .microphone.listening { background: #172554; box-shadow: 0 0 0 12px #e6eaf5; }
+.meemaw-app .mic-label { text-align: center; font-size: 1.125rem; font-weight: 700; }
+.meemaw-app .voice-note { text-align: center; margin: 8px auto 28px; max-width: 540px; }
+.meemaw-app .question-suggestion { font-size: 1rem; color: #53617a; text-align: left; text-decoration: underline; text-underline-offset: 4px; }
+.meemaw-app .answer-card { margin-top: 28px; border-top: 5px solid #709d85; }
+.meemaw-app .answer-text { font-size: 1.4rem; line-height: 1.8; white-space: pre-wrap; margin: 22px 0; }
+.meemaw-app .button-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 24px; }
+.meemaw-app .source-list { font-size: 1rem; padding-left: 22px; list-style: disc; margin: 20px 0; }
+.meemaw-app .source-list a { text-decoration: underline; }
+@media (max-width: 680px) { .meemaw-app .invite-card { flex-direction: column; align-items: stretch; } .meemaw-app .dashboard-shell { padding-top: 28px; } .meemaw-app .button-row { flex-direction: column; width: 100%; } .meemaw-app .empty-state { padding: 28px 22px; } }
+.meemaw-app .answer-feedback { margin-top: 30px; padding-top: 28px; border-top: 1px solid #e1e5e9; }
+.meemaw-app .answer-feedback .secondary { font-size: 1rem; }
+.meemaw-app .answer-feedback [aria-pressed="true"] { background: #172554; color: white; }
